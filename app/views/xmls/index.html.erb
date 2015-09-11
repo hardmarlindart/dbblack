@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+
+      <div class="row">
+        
+        <div class="container-fluid">
+          <h1 class="page-header">Dashboard</h1>
+
+          
+
+        
+
+          <h2 class="sub-header">Section title</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Pin</th>
+                  <th>Alvo</th>
+                  <th>Nome</th>
+                  <th>Operação</th>
+                  <th>Fase</th>
+                  <th>Arquivo</th>
+                </tr>
+              </thead>
+              <tbody>
+              <% @xmls.each do |xml| %>
+
+              <tr>
+                  <td>234677ss</td>
+                  <td><%= xml.alvo %></td>
+                  <td><%= xml.nome %></td>
+                  <td><%= xml.operacao %></td>
+                  <td><%= xml.fase %></td>
+                  <td><%= xml.gpx_file_name %></td>
+                  <td><%= link_to 'Show', xml %></td>
+        <td><%= link_to 'Edit', edit_xml_path(xml) %></td>
+        <td><%= link_to 'Destroy', xml, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  
+                </tr>
+             </tbody>  
+             <% end %> 
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+<%= link_to 'New Xml', new_xml_path %>
+

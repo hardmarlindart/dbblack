@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tracksegment_id: 
+  nome: MyString
+  origem: MyString
+  destino: MyString
+  mensagem: MyString
+  hora: MyString
+
+two:
+  tracksegment_id: 
+  nome: MyString
+  origem: MyString
+  destino: MyString
+  mensagem: MyString
+  hora: MyString

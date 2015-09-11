@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  alvo: MyString
+  nome: MyString
+  operacao: MyString
+  fase: 1
+
+two:
+  alvo: MyString
+  nome: MyString
+  operacao: MyString
+  fase: 1

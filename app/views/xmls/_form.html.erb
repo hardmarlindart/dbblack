@@ -1,0 +1,39 @@
+<%= form_for(@xml) do |f| %>
+  <% if @xml.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@xml.errors.count, "error") %> prohibited this xml from being saved:</h2>
+
+      <ul>
+      <% @xml.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :alvo %><br>
+    <%= f.text_field :alvo %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :operacao %><br>
+    <%= f.text_field :operacao %>
+  </div>
+  <div class="field">
+    <%= f.label :fase %><br>
+    <%= f.number_field :fase %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gpx %> <br>
+      <%= f.file_field :gpx %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

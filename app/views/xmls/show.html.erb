@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Alvo:</strong>
+  <%= @xml.alvo %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @xml.nome %>
+</p>
+
+<p>
+  <strong>Operacao:</strong>
+  <%= @xml.operacao %>
+</p>
+
+<p>
+  <strong>Fase:</strong>
+  <%= @xml.fase %>
+</p>
+
+
+
+<div> 
+
+  
+
+
+<div class="row " style="padding-top:40px;">
+   
+
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter Message" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button">SEND</button>
+                    </span>
+                </div>
+
+
+
+
+    <br /><br />
+    <div class="col-md-12">
+        <div class="pane panel-info">
+            <div class="panel-heading">
+                CHAT 
+            </div>
+            <div class="panel-body">
+<ul class="media-list">
+
+                                    <% @xml.dados.each do |point| %>
+                                    <li class="media">
+
+                                        <div class="media-body">
+
+                                            <div class="media">
+                                                <a class="pull-left" href="#">
+                                                   <%= image_tag("1.png",  :class => "media-object img-circle") %>
+                                                </a>
+                                                <div class="media-body" >
+                                                    <h4><%= point.mensagem %><h4>
+                                                    
+                                                    <br />
+                                                   <small class="text-muted"><%= point.destino %> | <%= point.origem %></small>
+                                                    <hr />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <% end %>
+                                    <li class="media"></li>
+                                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+
+
+
+<%= link_to 'Edit', edit_xml_path(@xml) , :class =>"btn btn-primary" %> 
+<%= link_to 'Back', xmls_path %>,
